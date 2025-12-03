@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Checkout Source Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
@@ -25,8 +25,8 @@ jobs:
       - name: Build APK
         run: flutter build apk --release
 
-      - name: Upload APK to GitHub Artifacts
-        uses: actions/upload-artifact@v3
+      - name: Upload APK Artifact
+        uses: actions/upload-artifact@v4
         with:
           name: Flutter-APK
           path: build/app/outputs/flutter-apk/app-release.apk
