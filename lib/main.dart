@@ -1,4 +1,5 @@
 import 'dart:convert';
+import '../../fullScreenPage.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:cached_network_image/cached_network_image.dart';
