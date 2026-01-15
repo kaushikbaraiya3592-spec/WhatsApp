@@ -108,14 +108,26 @@ class _HomePageState extends State<HomePage> {
                 crossAxisCount: 2,
                 crossAxisSpacing: 8,
                 mainAxisSpacing: 8,
+              childAspectRatio:0.6
               ),
               itemBuilder: (context, i) {
-                return CachedNetworkImage(
-                  imageUrl: wallpapers[i]['src']['portrait'],
-                  fit: BoxFit.cover,
-                  placeholder: (c, _) =>
-                      Container(color: Colors.grey.shade300),
-                );
+              return GestureDetector(
+  onTap: () {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => FullScreenPage(
+          wallpapers: wallpapers,
+          index: i,
+        ),
+      ),
+    );
+  },
+  child: CachedNetworkImage(
+    imageUrl: wallpapers[i]['src']['portrait'],
+    fit: BoxFit.cover,
+  ),
+);
               },
             ),
     );
