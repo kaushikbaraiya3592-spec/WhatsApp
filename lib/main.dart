@@ -117,14 +117,13 @@ class _HomePageState extends State<HomePage> {
   onTap: () {
     Navigator.push(
       context,
-      MaterialPageRoute(
-        builder: (_) =>AnimatedPageRoute
+     AnimatedPageRoute
         (
           page:FullScreenPage(
           wallpapers: wallpapers,
           index: i,
         ),
-      ),
+
       ),
     );
   },
